@@ -1,4 +1,5 @@
 # Simple Maps
+[demo](http://alileza.github.io/simple-maps/demo/)
 ### Example
 ```html
 <style>
