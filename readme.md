@@ -33,6 +33,23 @@ var start = function(){
 </script>
 ```
 
+### Installation
+add this on you head
+```html
+<meta id="MAPS_API_KEY" content="apikey123">
+<meta id="MAPS_API_URL" content="https://maps.googleapis.com/maps/api/js">
+<meta id="MAPS_CALLBACK" content="start">
+```
+* MAPS_API_KEY : you can get from google developer (required)
+* MAPS_API_URL : google maps api URL (optional)
+* MAPS_CALLBACK : first function that will called, after maps is loaded
+
+---
+Also add this on bottom of body
+```html
+<script src="../dist/maps.js"></script>
+```
+
 ### Map API
 ###### Construct a Map
 ```javascript
