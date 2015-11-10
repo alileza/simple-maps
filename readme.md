@@ -34,6 +34,10 @@ var start = function(){
 ```
 
 ### Map API
+###### Construct a Map
+```javascript
+  var myMap = new Map('map', options)
+```
 ###### Set Center
 ```javascript
   myMap.setCenter({ lat: -6.2009877,lng: 106.8391089 });
@@ -43,3 +47,38 @@ var start = function(){
 ```javascript
   myMap.setZoom(10);
 ```
+### Marker API
+###### Create a Marker
+```javascript
+  var myMarker = new Marker({
+                    map: myMap,
+                    position: { lat: -6.2009877,lng: 106.8391089 }
+                  })
+```
+
+###### Draw Marker to Map
+```javascript
+  myMarker.draw()
+```
+
+###### Drop
+```javascript
+  myMarker.drop()
+```
+
+###### Jump
+```javascript
+  myMarker.jump()
+```
+
+###### Jump Once
+```javascript
+  myMarker.jumpOnce()
+```
+
+###### Remove
+```javascript
+  myMarker.remove()
+```
+
+---
