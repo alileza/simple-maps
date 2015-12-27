@@ -18,22 +18,32 @@
 
     <script src="../dist/maps.js"></script>
     <script>
-    var myMap;
+    "use strict"
     function start(){
 
       var options = {
-        zoom : 17       // Options
+        zoom : 17
       }
 
-      myMap = new Map('map', options),
-          myMarkers = []
+      var map = new Map('map', options);
 
-      myMarkers[0] = new Marker({
-                        map: myMap,
-                        position: { lat: -6.2009877,lng: 106.8391089 }
-                      })
+      var marker = map.addMarker({
+        position: { lat: -6.2009877,lng: 106.8391089 }
+      }).draw().label('<div>ini satu</div>');
 
-      myMarkers[0].drop()
+      var marker = map.addMarker({
+        icon: "http://i.stack.imgur.com/6cDGi.png",
+        position: { lat: -6.2001877,lng: 106.8391089 }
+      }).draw().label('<div>ini dua</div>');
+
+
+
+      // new Marker({
+      //   map: myMap,
+      //   position: { lat: -6.2009877,lng: 106.8391089 }
+      // }).draw().jump();
+
+
     }
     </script>
 </body>

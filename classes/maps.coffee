@@ -1,3 +1,5 @@
+Marker = require './markers.coffee'
+
 class Map
   constructor: (container, opts) ->
     container = document.getElementById( container )
@@ -8,7 +10,11 @@ class Map
     @map = new google.maps.Map container,
       zoom: @zoom
       center: new google.maps.LatLng(@center[0], @center[1])
+    @
 
+  addMarker: (options) =>
+    options.map = @
+    return new Marker options
 
   setCenter: (e) => @map.panTo e
   setZoom: (e) => @map.setZoom e
